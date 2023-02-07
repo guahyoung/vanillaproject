@@ -1,4 +1,5 @@
-const openButton = document.querySelector("#cart1");
+
+const openButton = document.querySelector(".best-page-cartButton");
 const container = document.querySelector(".add-cart-hidden");
 const closeButton = document.querySelector("#close");
 
