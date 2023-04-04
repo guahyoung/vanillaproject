@@ -1,7 +1,7 @@
-@import url(/client/css/reset.css);
-@import url(/client/css/normalize.css);
-@import url(/client/css/fontello.css);
-@import url(/client/css/color.css);
+@import url(../css/reset.css);
+@import url(../css/normalize.css);
+@import url(../css/fontello.css);
+@import url(../css/color.css);
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 /* 숨김 컨텐츠 */
@@ -426,21 +426,143 @@ padding-left: 20px;
   justify-content: space-between;
   gap: 20px;
 }
+
 /* 메인 */
+.id-input{
+  position: relative;  
+}
 
+.alert-error{
+  position: absolute;
+  left: 23%;
+  bottom: -27px;
+  /* margin: 10px 0 5px 0; */
+  color: red;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+.alert-error.deactive{
+  display: none;
+}
+
+.check-container{
+  position: relative;  
+}
+
+.alert-error-email{
+  position: absolute;
+  left: 23%;
+  bottom: -27px;
+  /* margin: 10px 0 5px 0; */
+  color: red;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+.alert-error-email.deactive{
+  display: none;
+}
+
+
+/*
+.alert-error{
+  display: none;
+  color: red;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+.alert-error.is-active{
+  color: red;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+*/
+
+button:disabled{
+  cursor: not-allowed;
+  background: #111 !important;
+  color: #a8aab8;
+}
+.register-tip{
+  bottom: 0;
+  right:0;
+  position: absolute;
+ text-align: right; 
+ font-weight: 600;
+font-size: 12.003px;
+}
 .main{
-
-  background: linear-gradient(to bottom, #eee 0%, #fff 3%, #fff 100%);
+ 
+  background: linear-gradient(to bottom, #eee 0%, #fff 1%, #fff 100%);
   width: 100%;
   padding-top:80px;
 }
-.main p{
-  font-size: 21.328px;
+.register-header{
+  position: relative;
   font-weight: 600;
-  margin-bottom: 50px;
+font-size: 21.328px;
+padding-bottom: 50px;
+border-bottom: 2px black solid;
+}
+.register-list button{
+  
+  font-weight: 600;
+ font-size: 16px;
+}
+.register-list li:first-child{
+  margin-top:20px;
+}
+.register-list li{
+  font-weight: 600;
+  font-size: 16px;
+
+ 
+  display: flex;
+  width: 640px;
+  margin-bottom: 40px;
+  /* height: 40px; */
+
+}
+.register-list li p{
+  display: flex;
+  align-items: center;
+  
+  text-align: left;
+  width:147.5px;
+}
+.register-list li input{
+  padding-left: 20px;
+}
+.register-list li button{
+  color:#5F0080;
+  font-weight: 600;
+  border:2px #5F0080 solid;
+}
+.side-button-size{
+  font-weight: 600;
+  border-radius: 4px;
+  width: 143px;
+  margin-left:10px;
 }
 
-.LoginButtonSize{
+
+
+.button-size {
+  border:1px gray solid;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  width: 333px;
+height: 44px;
+}
+.register-button{
+  
+  margin: 0 auto;
+  margin-top:40px;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
@@ -449,37 +571,154 @@ padding-left: 20px;
   width:340px;
   height: 54px;
   border-radius: 4px;
-  border:1px rgb(161, 160, 160) solid;
-}
-.LoginInput{
-  padding-left: 18px;
-  color:#898989;
-}
-.LoginButton{
   font-weight: 600;
   color:#ffffff;
   background-color: #5F0080;
-  border:#5F0080;
+  border:#5F0080
 }
-.MembershipButton{
-  font-weight: 600;
-  color:#5F0080;
-  border:#5F0080 1px solid;
-  margin-bottom: 80px;
-}
-.FindIQ{
-  font-weight: 600;
-  font-size: 12px;
-  display: flex;
-  flex-direction: row-reverse;
-  margin-bottom: 28px;
-}
-.FindIQ li:first-child::before{
 
- content:"ㅣ";
+.important::after{
+  content:'*';
+  position: relative;
+  margin-left:3px;
+  top:-10px;
+  color:#FA622F;
+  font-size: 12px;
+  font-weight: 900;
 }
-.logout-button{
-  display:none
+.adress-list{
+ position: relative;
+}
+.adress-list span{
+ position: absolute;
+ bottom:-20px;
+ left: 147px;
+ font-weight: 400;
+font-size: 12.003px;
+}
+.register-tip::before{
+  content:'*';
+  position: relative;
+  top:-2px;
+  color:#FA622F;
+  font-size: 12px;
+  font-weight: 900;
+}
+.gender-wrapper{
+  
+  
+  width:333px;
+  display: flex;
+  justify-content: space-between;
+}
+.gender-wrapper label input,.plus-wrapper label input{
+  margin-right:8px;
+
+}
+.plus-wrapper{
+  width:333px;
+  display: flex;
+  justify-content: space-between;
+}
+/* 개인정보동의 */
+.use-agreement{
+  border-top: 2px black solid;
+  border-bottom: 1px gray solid;
+  display: flex;
+  flex-flow: row;
+  margin-bottom:0;
+}
+
+#use-agreement{
+  margin-bottom: 0;
+}
+#use-agreement-header{
+  display:block;
+
+  margin-top:28px;
+  width:130px;
+}
+
+.use-agreement-list input{
+    
+    margin-right:6px;
+}
+.use-agreement-list li{
+  margin-bottom: 25px;
+  width:480px;
+  height: 30px;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+.use-agreement-list li p{
+  
+  font-weight: 400;
+  font-size: 16px;
+  margin-top:0;
+  width:360px;
+}
+.use-agreement-list li a{
+  margin-right: 30px;
+  color: #5F0080;
+  font-weight: 400;
+font-size: 12.003px;
+}
+.use-agreement-list li:first-child span{
+  font-weight: 400;
+  font-size: 12.003px;
+  color: #898989;
+ 
+  position: absolute;
+  top:24px;
+  left:0;
+}
+
+.use-agreement-list li:first-child{
+  margin-top:20px;
+}
+.use-agreement-list li:first-child p{
+  
+  position: relative;
+  width:480px;
+  font-weight: 600;
+  font-size: 21.328px;
+}
+label{
+  display:flex;
+  align-items: center;
+}
+
+/* input 인데 클래스 check2를 가진 인풋 */
+input[class="check2"]{
+  display:none;
+}
+
+input[class="check2"] + label em{
+  display:inline-block;
+  width: 24px;
+  height: 24px;
+  background:url(../assets/icons/input_icon/isSelected=false.svg) 0 0 no-repeat ;
+  margin-right: 3px;
+}
+input[class="check2"]:checked + label em{
+  background:url(../assets/icons/input_icon/isSelected=true.svg) 0 0 no-repeat;
+}
+
+input[class="all-check"],input[class="sub-check"]{
+  display:none;
+}
+input[class="all-check"] + label em,input[class="sub-check"] + label em{
+  display:inline-block;
+  width: 24px;
+  height: 24px;
+  background:url(../assets/icons/input_icon/isChecked=false.svg) 0 0 no-repeat ;
+  margin-right: 8px;
+}
+input[class="all-check"]:checked + label em,input[class="sub-check"]:checked + label em{
+  background:url(../assets/icons/input_icon/isChecked=true.svg) 0 0 no-repeat;
 }
 /* 푸터 */
 .footer {
