@@ -1,4 +1,3 @@
-
 const openButton = document.querySelector(".best-page-cartButton");
 const container = document.querySelector(".add-cart-hidden");
 const addCartOverlay = document.querySelector(".add-cart-overlay");
@@ -20,18 +19,3 @@ addCartOverlay.addEventListener("click", () => {
 container.addEventListener("keydown", (e) => {
   if (e.key === "Escape") container.style.display = "none";
 });
-
-//Add cart bubble
-let addCartButton = document.querySelector("#in-cart");
-
-function bubbleHandler() {
-  let bubble1 = document.querySelector("#add-cart-bubble");
-  bubble1.style.display = "flex";
-  container.style.display = "none";
-  openButton.style.display = "block";
-  setTimeout(function () {
-    bubble1.style.display = "none";
-  }, 4000);
-}
-
-addCartButton.addEventListener("click", bubbleHandler);
